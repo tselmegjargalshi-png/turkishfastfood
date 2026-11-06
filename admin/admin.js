@@ -249,6 +249,12 @@
           <button class="btn btn--gold" type="button" data-act="export">JSON татах</button>
           <label class="btn">JSON оруулах<input type="file" id="importFile" accept="application/json,.json" hidden></label>
           <button class="btn btn--danger" type="button" data-act="resetDefault">Анхны цэс рүү буцаах</button>
+        </div></div>
+      <div class="panel"><h3>QR кодууд</h3>
+        <p class="muted">Хэвлэхэд бэлэн хоёр загвар. Хоёулаа ${esc(location.origin)} хаяг руу заана.</p>
+        <div class="gallery">
+          <div class="tile"><img src="/qr/qr_table_card.png" alt="Ширээний QR карт"><div class="tile__body"><small>Ширээний карт (10x15 см)</small><a class="btn btn--sm btn--gold" href="/qr/qr_table_card.png" download>PNG татах</a></div></div>
+          <div class="tile"><img src="/qr/qr_sticker.png" alt="Дугуй QR наалт"><div class="tile__body"><small>Дугуй наалт / цонхны постер</small><a class="btn btn--sm btn--gold" href="/qr/qr_sticker.png" download>PNG татах</a></div></div>
         </div></div>`;
     $("#importFile").addEventListener("change", async (e) => {
       const f = e.target.files[0]; if (!f) return;
