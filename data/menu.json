@@ -1,0 +1,779 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-06T15:00:00.000Z",
+  "brand": {
+    "name": "İstanbul Fast Food",
+    "logo": "/assets/logo.webp",
+    "cover": "",
+    "slogan": {
+      "mn": "Босфорын амт, таны гарт.",
+      "tr": "Boğazın lezzeti, avucunuzda."
+    },
+    "tagline": {
+      "mn": "Шарахаас шууд, халуун, шинэхэн. Истанбулын гудамжны жинхэнэ амт.",
+      "tr": "Ocaktan sıcak sıcak. İstanbul sokaklarının gerçek lezzeti."
+    },
+    "notice": {
+      "mn": "Захиалгаа касс дээр өгнө үү",
+      "tr": "Siparişinizi kasada veriniz"
+    },
+    "address": "Moda Caddesi No: 42, Kadıköy, İstanbul",
+    "mapUrl": "https://maps.google.com/?q=Moda+Caddesi+42+Kadikoy+Istanbul",
+    "phone": "+90 216 555 42 42",
+    "instagram": "istanbulfastfood.tr",
+    "hours": {
+      "mn": "Өдөр бүр 10:00 цагаас 02:00 цаг хүртэл",
+      "tr": "Her gün 10:00 ile 02:00 arası"
+    },
+    "open": "10:00",
+    "close": "02:00",
+    "wifi": "IstanbulFF Misafir",
+    "footer": {
+      "mn": "Afiyet olsun! Сайхан хооллоорой.",
+      "tr": "Afiyet olsun! Yine bekleriz."
+    }
+  },
+  "promos": [],
+  "media": [],
+  "categories": [
+    {
+      "id": "burgerler",
+      "name": "Burgerler",
+      "subtitle": {
+        "mn": "Шүүслэг үхрийн мах, шинэхэн талх",
+        "tr": "Sulu dana köfte, taze ekmek"
+      },
+      "items": [
+        {
+          "id": "klasik-burger",
+          "name": "Klasik Burger",
+          "desc": {
+            "mn": "150 гр үхрийн махан котлет, улаан лооль, салат, даршилсан өргөст хэмх, тусгай сүмс",
+            "tr": "150 gr dana köfte, domates, marul, turşu, özel sos"
+          },
+          "price": 320,
+          "kcal": 640,
+          "allergens": [
+            "gluten",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "cheeseburger",
+          "name": "Cheeseburger",
+          "desc": {
+            "mn": "Үхрийн махан котлет, хайлсан чеддар бяслаг, сонгино, даршилсан өргөст хэмх",
+            "tr": "Dana köfte, eriyen cheddar, soğan, turşu"
+          },
+          "price": 360,
+          "kcal": 720,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "double-cheeseburger",
+          "name": "Double Cheeseburger",
+          "desc": {
+            "mn": "Хоёр давхар котлет, хоёр давхар чеддар, карамельжсан сонгино",
+            "tr": "Çift köfte, çift cheddar, karamelize soğan"
+          },
+          "price": 490,
+          "kcal": 1040,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "sultan-burger",
+          "name": "Acılı Sultan Burger",
+          "desc": {
+            "mn": "Манай онцлох бүтээл: үхрийн мах, сужук хиам, жалапено, халуун ногоотой Султан сүмс",
+            "tr": "İmza lezzetimiz: dana köfte, sucuk, jalapeño, acılı Sultan sos"
+          },
+          "price": 520,
+          "kcal": 980,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [
+            "signature",
+            "spicy"
+          ],
+          "available": true
+        },
+        {
+          "id": "tavuk-burger",
+          "name": "Çıtır Tavuk Burger",
+          "desc": {
+            "mn": "Шаржигнуур шарсан тахианы цээж, байцааны салат, сармистай майонез",
+            "tr": "Çıtır tavuk göğsü, coleslaw, sarımsaklı mayonez"
+          },
+          "price": 340,
+          "kcal": 690,
+          "allergens": [
+            "gluten",
+            "eggs",
+            "milk",
+            "mustard"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "mantarli-burger",
+          "name": "Mantarlı Burger",
+          "desc": {
+            "mn": "Үхрийн махан котлет, шарсан мөөг, швейцар бяслаг, трюфель майонез",
+            "tr": "Dana köfte, sote mantar, İsviçre peyniri, trüf mayonez"
+          },
+          "price": 460,
+          "kcal": 860,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "sesame"
+          ],
+          "tags": [
+            "new"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "donerler",
+      "name": "Dönerler",
+      "subtitle": {
+        "mn": "Шорлогоос шууд хэрчсэн",
+        "tr": "Şişten taze kesilmiş"
+      },
+      "items": [
+        {
+          "id": "tavuk-doner-durum",
+          "name": "Tavuk Döner Dürüm",
+          "desc": {
+            "mn": "Нимгэн лаваш, тахианы дөнер, улаан лооль, сонгино, ногоон чинжүү, сармистай сүмс",
+            "tr": "Lavaş, tavuk döner, domates, soğan, yeşil biber, sarımsaklı sos"
+          },
+          "price": 260,
+          "kcal": 590,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "et-doner-durum",
+          "name": "Et Döner Dürüm",
+          "desc": {
+            "mn": "Лаваш, үхрийн махан дөнер, сумах сонгино, улаан лооль, исгэлэн сүү сүмс",
+            "tr": "Lavaş, et döner, sumaklı soğan, domates, yoğurtlu sos"
+          },
+          "price": 380,
+          "kcal": 650,
+          "allergens": [
+            "gluten",
+            "milk"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "ekmek-arasi-doner",
+          "name": "Ekmek Arası Döner",
+          "desc": {
+            "mn": "Шинэхэн жигнэсэн талханд дөнер, шарсан төмс, салат",
+            "tr": "Taze ekmek arası döner, patates, salata"
+          },
+          "price": 280,
+          "kcal": 710,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "iskender",
+          "name": "İskender Kebap",
+          "desc": {
+            "mn": "Пидэ талх, үхрийн махан дөнер, улаан лоолийн сүмс, хайлсан цөцгийн тос, исгэлэн сүү",
+            "tr": "Pide üstü et döner, domates sos, kızgın tereyağı, yoğurt"
+          },
+          "price": 540,
+          "kcal": 920,
+          "allergens": [
+            "gluten",
+            "milk"
+          ],
+          "tags": [
+            "signature"
+          ],
+          "available": true
+        },
+        {
+          "id": "pilav-ustu-doner",
+          "name": "Pilav Üstü Tavuk Döner",
+          "desc": {
+            "mn": "Цөцгийн тостой будаа, тахианы дөнер, шарсан чинжүү, туршу",
+            "tr": "Tereyağlı pilav, tavuk döner, közlenmiş biber, turşu"
+          },
+          "price": 320,
+          "kcal": 760,
+          "allergens": [
+            "milk"
+          ],
+          "tags": [],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "pide-lahmacun",
+      "name": "Pide ve Lahmacun",
+      "subtitle": {
+        "mn": "Чулуун зууханд жигнэсэн",
+        "tr": "Taş fırında pişmiş"
+      },
+      "items": [
+        {
+          "id": "lahmacun",
+          "name": "Lahmacun",
+          "desc": {
+            "mn": "Нимгэн гурилан дээр татсан мах, улаан лооль, яншуй; нимбэг, ногоотой",
+            "tr": "İnce hamur, kıymalı harç, maydanoz, limon ve yeşillik ile"
+          },
+          "price": 150,
+          "kcal": 420,
+          "allergens": [
+            "gluten"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "acili-lahmacun",
+          "name": "Acılı Lahmacun",
+          "desc": {
+            "mn": "Урфа чинжүүтэй, халуун ногоотой хувилбар",
+            "tr": "İsot biberli, acı sevenlere"
+          },
+          "price": 165,
+          "kcal": 430,
+          "allergens": [
+            "gluten"
+          ],
+          "tags": [
+            "spicy"
+          ],
+          "available": true
+        },
+        {
+          "id": "kiymali-pide",
+          "name": "Kıymalı Pide",
+          "desc": {
+            "mn": "Завь хэлбэрийн пидэ, татсан үхрийн мах, сонгино, чинжүү",
+            "tr": "Kıymalı, soğanlı, biberli kayık pide"
+          },
+          "price": 300,
+          "kcal": 780,
+          "allergens": [
+            "gluten"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "kasarli-pide",
+          "name": "Kaşarlı Pide",
+          "desc": {
+            "mn": "Хайлсан кашар бяслагтай, өндөгтэй пидэ",
+            "tr": "Bol kaşarlı, yumurtalı pide"
+          },
+          "price": 280,
+          "kcal": 820,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        },
+        {
+          "id": "karisik-pide",
+          "name": "Karışık Pide",
+          "desc": {
+            "mn": "Сужук, татсан мах, кашар бяслаг, өндөг: бүгд нэг дор",
+            "tr": "Sucuk, kıyma, kaşar ve yumurta bir arada"
+          },
+          "price": 390,
+          "kcal": 940,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [
+            "signature"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "atistirmaliklar",
+      "name": "Atıştırmalıklar",
+      "subtitle": {
+        "mn": "Хуваалцах тусам амттай",
+        "tr": "Paylaştıkça lezzetli"
+      },
+      "items": [
+        {
+          "id": "patates",
+          "name": "Patates Kızartması",
+          "desc": {
+            "mn": "Алтлаг шаржигнуур шарсан төмс, далайн давс",
+            "tr": "Altın sarısı çıtır patates, deniz tuzu"
+          },
+          "price": 140,
+          "kcal": 380,
+          "allergens": [],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        },
+        {
+          "id": "baharatli-patates",
+          "name": "Baharatlı Patates",
+          "desc": {
+            "mn": "Паприка болон ногоотой амтлагчтай шарсан төмс, бяслагтай сүмс",
+            "tr": "Paprika ve baharatlı patates, cheddar sos"
+          },
+          "price": 170,
+          "kcal": 460,
+          "allergens": [
+            "milk"
+          ],
+          "tags": [
+            "veg",
+            "spicy"
+          ],
+          "available": true
+        },
+        {
+          "id": "sogan-halkasi",
+          "name": "Soğan Halkası",
+          "desc": {
+            "mn": "8 ширхэг шаржигнуур сонгины цагираг, барбекю сүмс",
+            "tr": "8 adet çıtır soğan halkası, barbekü sos"
+          },
+          "price": 150,
+          "kcal": 410,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        },
+        {
+          "id": "tavuk-nugget",
+          "name": "Tavuk Nugget",
+          "desc": {
+            "mn": "8 ширхэг тахианы наггетс, зөгийн балтай гичийн сүмс",
+            "tr": "8 adet tavuk nugget, ballı hardal sos"
+          },
+          "price": 190,
+          "kcal": 470,
+          "allergens": [
+            "gluten",
+            "eggs",
+            "mustard"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "tavuk-kanat",
+          "name": "Acılı Tavuk Kanat",
+          "desc": {
+            "mn": "6 ширхэг халуун ногоотой тахианы далавч, ранч сүмс",
+            "tr": "6 adet acılı kanat, ranch sos"
+          },
+          "price": 260,
+          "kcal": 560,
+          "allergens": [
+            "milk",
+            "eggs",
+            "celery"
+          ],
+          "tags": [
+            "spicy"
+          ],
+          "available": true
+        },
+        {
+          "id": "sigara-boregi",
+          "name": "Sigara Böreği",
+          "desc": {
+            "mn": "5 ширхэг нимгэн юфка гурилтай, цагаан бяслагтай ороомог бөрөг",
+            "tr": "5 adet yufkalı, beyaz peynirli börek"
+          },
+          "price": 170,
+          "kcal": 390,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        },
+        {
+          "id": "mercimek-corbasi",
+          "name": "Mercimek Çorbası",
+          "desc": {
+            "mn": "Улаан сэвэг зарам шөл, нимбэг, хуурай талхны шарсан хэрчим",
+            "tr": "Kırmızı mercimek çorbası, limon ve kıtır ekmek"
+          },
+          "price": 120,
+          "kcal": 260,
+          "allergens": [
+            "gluten",
+            "celery",
+            "milk"
+          ],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "menuler",
+      "name": "Menüler",
+      "subtitle": {
+        "mn": "Хямд, хангалуун багц",
+        "tr": "Doyurucu ve avantajlı"
+      },
+      "items": [
+        {
+          "id": "burger-menu",
+          "name": "Burger Menü",
+          "desc": {
+            "mn": "Cheeseburger, дунд хэмжээний шарсан төмс, ундаа эсвэл айран",
+            "tr": "Cheeseburger, orta boy patates, içecek ya da ayran"
+          },
+          "price": 450,
+          "kcal": 1180,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "doner-menu",
+          "name": "Döner Menü",
+          "desc": {
+            "mn": "Тахианы дөнер дүрүм, шарсан төмс, айран",
+            "tr": "Tavuk döner dürüm, patates, ayran"
+          },
+          "price": 360,
+          "kcal": 1050,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "sultan-menu",
+          "name": "Sultan Menü",
+          "desc": {
+            "mn": "Acılı Sultan Burger, амтлагчтай төмс, сонгины цагираг, ундаа",
+            "tr": "Acılı Sultan Burger, baharatlı patates, soğan halkası, içecek"
+          },
+          "price": 690,
+          "kcal": 1720,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [
+            "signature",
+            "spicy"
+          ],
+          "available": true
+        },
+        {
+          "id": "aile-menusu",
+          "name": "Aile Menüsü",
+          "desc": {
+            "mn": "4 хүнд: 2 Cheeseburger, 2 Tavuk Döner Dürüm, 2 том шарсан төмс, 1 литр ундаа",
+            "tr": "4 kişilik: 2 Cheeseburger, 2 Tavuk Dürüm, 2 büyük patates, 1 litre içecek"
+          },
+          "price": 1490,
+          "kcal": 4300,
+          "allergens": [
+            "gluten",
+            "milk",
+            "eggs",
+            "mustard",
+            "sesame"
+          ],
+          "tags": [
+            "new"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "tatlilar",
+      "name": "Tatlılar",
+      "subtitle": {
+        "mn": "Османы ордны чихэрлэг уламжлал",
+        "tr": "Saray mutfağından tatlı gelenek"
+      },
+      "items": [
+        {
+          "id": "fistikli-baklava",
+          "name": "Fıstıklı Baklava",
+          "desc": {
+            "mn": "4 зүсэм, Газиантеп пистачио самартай, сироптой давхарга гурилан амттан",
+            "tr": "4 dilim, Antep fıstıklı, şerbetli baklava"
+          },
+          "price": 290,
+          "kcal": 520,
+          "allergens": [
+            "gluten",
+            "milk",
+            "nuts"
+          ],
+          "tags": [
+            "signature"
+          ],
+          "available": true
+        },
+        {
+          "id": "kunefe",
+          "name": "Künefe",
+          "desc": {
+            "mn": "Халуунаар нь: кадайф гурил, сунадаг бяслаг, сироп, пистачио",
+            "tr": "Sıcak servis: kadayıf, uzayan peynir, şerbet, fıstık"
+          },
+          "price": 270,
+          "kcal": 610,
+          "allergens": [
+            "gluten",
+            "milk",
+            "nuts"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "sutlac",
+          "name": "Fırın Sütlaç",
+          "desc": {
+            "mn": "Зууханд хөрсөлсөн сүүтэй будааны пудинг, шанцай",
+            "tr": "Fırında kızarmış sütlaç, tarçın"
+          },
+          "price": 150,
+          "kcal": 290,
+          "allergens": [
+            "milk"
+          ],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        },
+        {
+          "id": "kazandibi",
+          "name": "Kazandibi",
+          "desc": {
+            "mn": "Ёроолоо карамельжүүлсэн уламжлалт сүүн амттан",
+            "tr": "Dibi karamelize geleneksel sütlü tatlı"
+          },
+          "price": 160,
+          "kcal": 310,
+          "allergens": [
+            "milk"
+          ],
+          "tags": [
+            "veg"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "icecekler",
+      "name": "İçecekler",
+      "subtitle": {
+        "mn": "Сэрүүн ба халуун ундаа",
+        "tr": "Soğuk ve sıcak içecekler"
+      },
+      "items": [
+        {
+          "id": "ayran",
+          "name": "Ayran",
+          "desc": {
+            "mn": "Хөөстэй, давстай исгэлэн сүүн ундаа, 300 мл",
+            "tr": "Köpüklü yayık ayranı, 300 ml"
+          },
+          "price": 45,
+          "kcal": 110,
+          "allergens": [
+            "milk"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "salgam",
+          "name": "Şalgam",
+          "desc": {
+            "mn": "Адана маягийн исгэсэн улаан лууван шүүс, халуун эсвэл энгийн",
+            "tr": "Adana usulü şalgam, acılı ya da acısız"
+          },
+          "price": 55,
+          "kcal": 30,
+          "allergens": [],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "kola",
+          "name": "Kola",
+          "desc": {
+            "mn": "330 мл лаазтай ундаа",
+            "tr": "330 ml kutu"
+          },
+          "price": 70,
+          "kcal": 140,
+          "allergens": [],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "limonata",
+          "name": "Ev Yapımı Limonata",
+          "desc": {
+            "mn": "Гэрийн аргаар хийсэн нимбэгний ундаа, гаа навчтай",
+            "tr": "Ev yapımı, naneli limonata"
+          },
+          "price": 90,
+          "kcal": 150,
+          "allergens": [],
+          "tags": [
+            "new"
+          ],
+          "available": true
+        },
+        {
+          "id": "portakal-suyu",
+          "name": "Taze Portakal Suyu",
+          "desc": {
+            "mn": "Шинээр шахсан жүржийн шүүс, 300 мл",
+            "tr": "Taze sıkılmış portakal suyu, 300 ml"
+          },
+          "price": 110,
+          "kcal": 130,
+          "allergens": [],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "turk-cayi",
+          "name": "Türk Çayı",
+          "desc": {
+            "mn": "Алтанзул хэлбэрийн шилэн аяганд өтгөн турк цай",
+            "tr": "İnce belli bardakta demli çay"
+          },
+          "price": 25,
+          "kcal": 2,
+          "allergens": [],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "turk-kahvesi",
+          "name": "Türk Kahvesi",
+          "desc": {
+            "mn": "Зэс жезвэд чанасан, лукумтай турк кофе",
+            "tr": "Cezvede pişmiş, lokum ile"
+          },
+          "price": 110,
+          "kcal": 60,
+          "allergens": [
+            "nuts"
+          ],
+          "tags": [],
+          "available": true
+        },
+        {
+          "id": "su",
+          "name": "Su",
+          "desc": {
+            "mn": "Ундны ус, 500 мл",
+            "tr": "İçme suyu, 500 ml"
+          },
+          "price": 20,
+          "kcal": 0,
+          "allergens": [],
+          "tags": [],
+          "available": true
+        }
+      ]
+    }
+  ]
+}

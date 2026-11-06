@@ -1,0 +1,13 @@
+{
+  "name": "turkishfastfood",
+  "private": true,
+  "type": "module",
+  "description": "İstanbul Fast Food digital menu with admin dashboard",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "qr": "node scripts/make-qr.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2"
+  }
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>İstanbul Fast Food | Цахим цэс</title>
+  <meta name="description" content="İstanbul Fast Food цахим цэс. Босфорын амт, таны гарт. Burger, Döner, Lahmacun, Baklava болон бусад.">
+  <meta name="theme-color" content="#2b0808">
+  <meta property="og:title" content="İstanbul Fast Food | Цахим цэс">
+  <meta property="og:description" content="Босфорын амт, таны гарт.">
+  <meta property="og:image" content="/assets/og.jpg">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#menu">Цэс рүү шилжих</a>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="İstanbul Fast Food, эхлэл">
+      <img class="brand__logo" src="/assets/logo.webp" alt="" width="72" height="58" id="brandLogo">
+      <span class="brand__text">
+        <span class="brand__name">İstanbul <b>Fast Food</b></span>
+        <span class="brand__status" id="openStatus" aria-live="polite"></span>
+      </span>
+    </a>
+    <div class="lang" role="group" aria-label="Хэл сонгох">
+      <button type="button" data-lang="mn" aria-pressed="true">MN</button>
+      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+  </header>
+
+  <nav class="catbar" id="catbar" aria-label="Ангилал">
+    <div class="catbar__tabs" id="tabs" role="tablist"></div>
+    <div class="catbar__search" id="searchWrap" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" autocomplete="off" enterkeyhint="search" data-i18n-placeholder="searchPh">
+      <button type="button" class="iconbtn iconbtn--ghost" id="searchClose" data-i18n-aria="close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <button type="button" class="iconbtn" id="searchBtn" data-i18n-aria="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </button>
+    <button type="button" class="iconbtn" id="filterBtn" data-i18n-aria="filter" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18l-7 8.5V20l-4-2v-4.5z"/></svg>
+      <span class="dot" id="filterDot" hidden></span>
+    </button>
+  </nav>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroSlogan">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="hero__moon" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><path d="M60 14a36 36 0 1 0 0 72 29 29 0 1 1 0-72z"/><path d="m74 38 3.6 8.9 9.6.6-7.4 6.1 2.4 9.3-8.2-5.2-8.2 5.2 2.4-9.3-7.4-6.1 9.6-.6z"/></svg>
+      </div>
+      <img class="hero__logo" src="/assets/logo.webp" alt="İstanbul Fast Food лого" width="360" height="291" id="heroLogo">
+      <h1 class="hero__slogan" id="heroSlogan"></h1>
+      <p class="hero__tagline" id="heroTagline"></p>
+      <div class="hero__chips" id="heroChips"></div>
+    </section>
+
+    <div class="ribbonwrap" aria-hidden="true"><div class="ribbon"><div class="ribbon__track" id="ribbon"></div></div></div>
+
+    <div class="wrap">
+      <p class="notice" id="notice" role="note"></p>
+      <section class="promos" id="promos" hidden aria-label="Онцлох санал"></section>
+
+      <section class="picks" id="picks" aria-labelledby="picksTitle">
+        <div class="sechead">
+          <h2 id="picksTitle" data-i18n="picksTitle"></h2>
+          <p class="script" data-i18n="picksSub"></p>
+        </div>
+        <div class="picks__rail" id="picksRail"></div>
+      </section>
+
+      <div id="menu" class="menu" aria-live="polite">
+        <div class="skeleton" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+      <p class="empty" id="empty" hidden></p>
+    </div>
+
+    <section class="legend" id="allergens" aria-labelledby="legendTitle">
+      <div class="wrap">
+        <p class="script script--gold" data-i18n="legendScript"></p>
+        <h2 id="legendTitle" data-i18n="legendTitle"></h2>
+        <p class="legend__lead" data-i18n="legendLead"></p>
+        <ul class="legend__grid" id="legendGrid"></ul>
+
+        <div class="info" id="info"></div>
+        <p class="fineprint" data-i18n="fineprint"></p>
+        <p class="footer__thanks" id="footerThanks"></p>
+        <p class="footer__copy"><span id="year"></span> İstanbul Fast Food · <a href="/admin/" class="footer__admin" data-i18n="admin"></a></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="sheet" id="filterSheet" role="dialog" aria-modal="true" aria-labelledby="filterTitle" hidden>
+    <div class="sheet__scrim" data-close></div>
+    <div class="sheet__panel">
+      <div class="sheet__grip" aria-hidden="true"></div>
+      <h2 id="filterTitle" data-i18n="filterTitle"></h2>
+      <p class="sheet__lead" data-i18n="filterLead"></p>
+      <div class="filtergrid" id="filterGrid"></div>
+      <div class="filterdiet">
+        <label class="switch"><input type="checkbox" id="fVeg"><span></span><b data-i18n="onlyVeg"></b></label>
+        <label class="switch"><input type="checkbox" id="fNoSpicy"><span></span><b data-i18n="noSpicy"></b></label>
+      </div>
+      <div class="sheet__actions">
+        <button type="button" class="btn btn--ghost" id="filterReset" data-i18n="reset"></button>
+        <button type="button" class="btn btn--gold" id="filterApply" data-close></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sheet" id="itemSheet" role="dialog" aria-modal="true" aria-labelledby="itemTitle" hidden>
+    <div class="sheet__scrim" data-close></div>
+    <div class="sheet__panel sheet__panel--item" id="itemPanel"></div>
+  </div>
+
+  <button type="button" class="totop" id="toTop" data-i18n-aria="toTop" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+  </button>
+
+  <script src="/assets/allergens.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
