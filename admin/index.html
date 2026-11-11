@@ -1,71 +1,135 @@
 <!doctype html>
 <html lang="mn">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Удирдлагын самбар | İstanbul Fast Food</title>
-  <meta name="theme-color" content="#2b0808">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/admin/admin.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Удирдлагын самбар · İstanbul Fast Food</title>
+<link rel="icon" href="/assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@400;500;600;700;800&subset=cyrillic,cyrillic-ext,latin,latin-ext&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+body{background:#f4ebe1}
+.lock{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 30% 10%,var(--red2),#8a0201);padding:20px}
+.lock .b{background:#fff;border:4px solid var(--maroon);border-radius:28px;padding:26px;max-width:380px;width:100%;text-align:center;box-shadow:0 10px 0 var(--maroon2)}
+.lock img{width:220px;max-width:100%}
+.lock h1{font-family:'Lobster';font-weight:400;font-size:30px;color:var(--maroon);margin:6px 0 14px}
+.inp{width:100%;padding:12px 14px;border-radius:12px;border:2px solid var(--maroon);font:500 16px 'Rubik';background:#fff;outline:none;margin-bottom:10px}
+textarea.inp{min-height:76px;resize:vertical}
+.btn{padding:12px 18px;border-radius:12px;border:2px solid var(--maroon);background:var(--red);color:#fff;font:700 15px 'Rubik';cursor:pointer;box-shadow:0 3px 0 var(--maroon)}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.btn.sec2{background:#fff;color:var(--maroon)}
+.btn.danger{background:#fff;color:var(--red)}
+.btn.sm{padding:8px 12px;font-size:13px}
+.err{color:var(--red);font-weight:600;min-height:20px;margin-top:6px;font-size:14px}
+.bar{background:var(--maroon);color:#fff;position:sticky;top:0;z-index:40}
+.bar .row{display:flex;align-items:center;gap:10px;padding:10px 0}
+.bar img{height:40px;background:#fff;border-radius:10px;padding:2px 6px}
+.bar b{font-family:'Lobster';font-weight:400;font-size:21px;flex:1}
+.tabs{display:flex;gap:8px;padding:12px 0;overflow-x:auto}
+.tab{flex:none;padding:10px 16px;border-radius:999px;border:2px solid var(--maroon);background:#fff;font:600 14px 'Rubik';color:var(--maroon);cursor:pointer}
+.tab.act{background:var(--red);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:6px 0 14px}
+.stat{background:#fff;border:2px solid var(--maroon);border-radius:16px;padding:12px;text-align:center}
+.stat b{display:block;font:800 26px 'Rubik';color:var(--red)}
+.stat span{font-size:12.5px;color:var(--muted)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tools .inp{margin:0;flex:1;min-width:150px}
+.irow{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--maroon);border-radius:16px;padding:10px;margin-bottom:10px}
+.irow .th{width:56px;height:56px;border-radius:12px;background:var(--cream);border:2px solid var(--maroon);display:grid;place-items:center;font-size:24px;overflow:hidden;flex:none}
+.irow .th img{width:100%;height:100%;object-fit:cover}
+.irow .m{flex:1;min-width:0}
+.irow .m b{display:block;font-size:15.5px;color:var(--maroon);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.irow .m small{color:var(--muted)}
+.sw{position:relative;width:46px;height:26px;flex:none}
+.sw input{display:none}
+.sw i{position:absolute;inset:0;border-radius:99px;background:#ccc;border:2px solid var(--maroon);cursor:pointer;transition:.2s}
+.sw i::after{content:"";position:absolute;left:2px;top:2px;width:18px;height:18px;border-radius:50%;background:#fff;border:2px solid var(--maroon);transition:.2s;box-sizing:border-box}
+.sw input:checked+i{background:var(--lettuce)}
+.sw input:checked+i::after{left:22px}
+.modal{position:fixed;inset:0;z-index:100;background:rgba(44,2,2,.65);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:16px}
+.modal.open{display:flex}
+.mb{background:#fff;border:3px solid var(--maroon);border-radius:24px;max-width:560px;width:100%;padding:20px;margin:auto}
+.mb h3{font-family:'Lobster';font-weight:400;font-size:26px;color:var(--maroon);margin-bottom:12px}
+.lbl{font:600 13px 'Rubik';color:var(--muted);margin:2px 0 4px;display:block}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ach{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:12px}
+.ach label{display:flex;align-items:center;gap:8px;padding:6px 8px;border:2px solid #eadcd0;border-radius:12px;font-size:13.5px;cursor:pointer}
+.ach label.on{border-color:var(--red);background:#fff0ec}
+.ach input{display:none}
+.upl{border:2px dashed var(--red);border-radius:16px;padding:14px;text-align:center;background:#fff8f4;margin-bottom:12px}
+.upl img{max-width:100%;max-height:180px;border-radius:12px;border:2px solid var(--maroon);display:block;margin:0 auto 10px}
+.mact{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;flex-wrap:wrap}
+.card2{background:#fff;border:2px solid var(--maroon);border-radius:18px;padding:16px;margin-bottom:12px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);background:var(--maroon);color:#fff;padding:12px 20px;border-radius:14px;font-weight:600;z-index:200;transition:.3s;opacity:0}
+.toast.show{transform:translateX(-50%);opacity:1}
+.note{background:#fff7d6;border:2px solid var(--yellow);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;margin-bottom:12px}
+</style>
 </head>
 <body>
-  <!-- Login -->
-  <section class="login" id="login">
-    <form class="login__card" id="loginForm">
-      <img src="/assets/logo.webp" alt="İstanbul Fast Food" width="220" height="178">
-      <h1>Удирдлагын самбар</h1>
-      <p>Цэс, үнэ, илчлэг, харшил болон зургаа эндээс удирдана.</p>
-      <label class="field">
-        <span>Нууц үг</span>
-        <input type="password" id="pw" autocomplete="current-password" required>
-      </label>
-      <button class="btn btn--primary" type="submit">Нэвтрэх</button>
-      <p class="login__err" id="loginErr" role="alert"></p>
-      <a class="login__back" href="/">Цэс рүү буцах</a>
-    </form>
-  </section>
 
-  <!-- App -->
-  <div class="app" id="app" hidden>
-    <header class="bar">
-      <a class="bar__brand" href="/" target="_blank" rel="noopener" title="Цэсийг шинэ цонхонд нээх">
-        <img src="/assets/logo.webp" alt="" width="52" height="42">
-        <span><b>İstanbul Fast Food</b><small>Удирдлагын самбар</small></span>
-      </a>
-      <nav class="tabs" role="tablist" aria-label="Хэсгүүд">
-        <button role="tab" data-tab="menu" aria-selected="true">Цэс</button>
-        <button role="tab" data-tab="media" aria-selected="false">Зураг</button>
-        <button role="tab" data-tab="brand" aria-selected="false">Мэдээлэл</button>
-        <button role="tab" data-tab="backup" aria-selected="false">Нөөц</button>
-      </nav>
-      <button class="btn btn--ghost btn--sm" id="logout" type="button">Гарах</button>
-    </header>
+<div class="lock" id="lock">
+  <div class="b">
+    <img src="/assets/logo.png" alt="logo">
+    <h1>Удирдлагын самбар</h1>
+    <input class="inp" id="pw" type="password" placeholder="Нууц үг" autocomplete="current-password">
+    <button class="btn" id="login" style="width:100%">Нэвтрэх</button>
+    <div class="err" id="err"></div>
+  </div>
+</div>
 
-    <div class="storage" id="storageWarn" hidden>
-      <b>Хадгалах сан холбогдоогүй байна.</b>
-      Vercel дээр Blob store холбож, ADMIN_PASSWORD тохируулна уу (README харна уу). Тэр хүртэл өөрчлөлтөө "Нөөц" хэсгээс JSON файлаар татаж авах боломжтой.
+<div id="app" style="display:none">
+  <div class="bar"><div class="wrap"><div class="row">
+    <img src="/assets/logo.png" alt="logo"><b>Удирдлага</b>
+    <a class="btn sm sec2" href="/" target="_blank" style="text-decoration:none">Цэс харах</a>
+    <button class="btn sm sec2" id="logout">Гарах</button>
+  </div></div></div>
+
+  <div class="wrap">
+    <div class="tabs">
+      <button class="tab act" data-t="items">🍔 Хоолнууд</button>
+      <button class="tab" data-t="cats">🗂 Ангилал</button>
+      <button class="tab" data-t="set">⚙️ Тохиргоо</button>
+      <button class="tab" data-t="data">💾 Өгөгдөл</button>
     </div>
 
-    <main class="main">
-      <section data-panel="menu" id="panelMenu"></section>
-      <section data-panel="media" id="panelMedia" hidden></section>
-      <section data-panel="brand" id="panelBrand" hidden></section>
-      <section data-panel="backup" id="panelBackup" hidden></section>
-    </main>
+    <div id="t_items">
+      <div class="stats" id="stats"></div>
+      <div class="tools">
+        <input class="inp" id="aq" placeholder="Хоол хайх...">
+        <select class="inp" id="acat" style="max-width:190px"></select>
+        <button class="btn" id="addItem">＋ Шинэ хоол</button>
+      </div>
+      <div id="list"></div>
+    </div>
 
-    <div class="savebar" id="savebar">
-      <span id="saveState">Бүх өөрчлөлт хадгалагдсан</span>
-      <button class="btn btn--primary" id="saveBtn" type="button" disabled>Хадгалах</button>
+    <div id="t_cats" style="display:none">
+      <div id="catList"></div>
+      <button class="btn" id="addCat">＋ Шинэ ангилал</button>
+    </div>
+
+    <div id="t_set" style="display:none">
+      <div class="card2" id="setForm"></div>
+      <button class="btn" id="saveSet">Хадгалах</button>
+    </div>
+
+    <div id="t_data" style="display:none">
+      <div class="note">Өөрчлөлт бүр автоматаар Vercel Blob руу хадгалагдаж, бүх үйлчлүүлэгчид 1 минутын дотор харагдана. Нууц үгийг Vercel дээрх <code>ADMIN_PASSWORD</code> хувьсагчаар солино. «JSON татах» нь нөөц хуулбар авахад хэрэгтэй.</div>
+      <div class="card2">
+        <div class="mact" style="justify-content:flex-start">
+          <button class="btn" id="exp">⬇ JSON татах</button>
+          <label class="btn sec2" style="cursor:pointer">⬆ JSON оруулах<input type="file" id="imp" accept="application/json" style="display:none"></label>
+          <button class="btn danger" id="reset">↺ Репод байгаа анхны цэсийг сэргээх</button>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="modal" id="modal"><div class="mb" id="mb"></div></div>
+<div class="toast" id="toast"></div>
 
-  <script src="/assets/allergens.js"></script>
-  <script src="/admin/admin.js"></script>
+<script src="/assets/common.js"></script>
+<script src="/admin/admin.js"></script>
 </body>
 </html>

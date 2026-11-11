@@ -1,0 +1,115 @@
+:root{
+  --maroon:#420303; --maroon2:#2c0202; --red:#cd0403; --red2:#e20302; --white:#fff; --cream:#fff6ec;
+  --yellow:#f6b400; --lettuce:#7cb518; --ink:#2b0a0a; --muted:#7a5a54;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{font-family:'Rubik',system-ui,sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;overflow-x:hidden}
+.disp{font-family:'Lobster','Rubik',cursive;letter-spacing:.3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* Дээд мөр */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,246,236,.92);backdrop-filter:blur(10px);border-bottom:3px solid var(--maroon)}
+.top .row{display:flex;align-items:center;gap:10px;padding:8px 0}
+.brand{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.brand img{height:46px;width:auto}
+.brand b{font-family:'Lobster',cursive;font-size:22px;color:var(--red);white-space:nowrap}
+.ibtn{width:44px;height:44px;border-radius:14px;border:2px solid var(--maroon);background:#fff;color:var(--maroon);display:grid;place-items:center;font-size:19px;cursor:pointer;box-shadow:0 3px 0 var(--maroon);transition:transform .1s,box-shadow .1s}
+.ibtn:active{transform:translateY(3px);box-shadow:0 0 0 var(--maroon)}
+.ibtn.on{background:var(--red);color:#fff}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:9px 16px;border-radius:999px;border:2px solid var(--maroon);background:#fff;font:600 14px 'Rubik';color:var(--maroon);cursor:pointer;white-space:nowrap;transition:.15s}
+.chip.act{background:var(--red);color:#fff;border-color:var(--maroon);box-shadow:0 3px 0 var(--maroon);transform:translateY(-1px)}
+.searchbar{display:none;padding:0 0 10px}
+.searchbar.open{display:block}
+.searchbar input{width:100%;padding:12px 16px;border-radius:14px;border:2px solid var(--maroon);font:500 16px 'Rubik';background:#fff;outline:none}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(circle at 20% 0%,var(--red2),var(--red) 55%,#9d0202);color:#fff;text-align:center;padding:28px 16px 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 120%,rgba(255,255,255,.07) 0 6deg,transparent 6deg 12deg)}
+.hero .logo{position:relative;display:block;width:min(78vw,340px);margin:0 auto;background:#fff;border:4px solid var(--maroon);border-radius:34px;padding:10px 14px;box-shadow:0 9px 0 var(--maroon2);transform:rotate(-2deg);animation:pop .9s cubic-bezier(.2,1.6,.4,1) both}
+.hero h1{position:relative;font-family:'Lobster',cursive;font-weight:400;font-size:clamp(28px,7vw,44px);margin-top:6px;text-shadow:0 3px 0 var(--maroon)}
+.hero p{position:relative;max-width:460px;margin:8px auto 0;font-size:15.5px;line-height:1.5;opacity:.96}
+.skyline{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:92px;display:block}
+.cres{position:absolute;top:14px;right:16px;width:46px;opacity:.9;animation:spin 14s linear infinite}
+.steam{position:absolute;left:8%;top:40px;font-size:26px;opacity:.5;animation:float 5s ease-in-out infinite}
+.steam.b{left:auto;right:10%;top:120px;animation-delay:-2s}
+@keyframes pop{from{transform:scale(.6) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-12px) rotate(8deg)}}
+
+.ribbon{background:var(--yellow);color:var(--maroon);border-block:3px solid var(--maroon);overflow:hidden;white-space:nowrap;font:700 15px 'Rubik';text-transform:uppercase;letter-spacing:1.5px}
+.ribbon div{display:inline-block;padding:9px 0;animation:marq 26s linear infinite}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+.notice{margin:18px 0 6px;padding:14px 16px;border:2px dashed var(--red);border-radius:16px;background:#fff0ec;color:var(--red);font:700 17px 'Rubik';text-align:center;text-transform:uppercase;letter-spacing:.5px}
+
+/* Рулетк */
+.roll{display:flex;align-items:center;gap:12px;margin:14px 0 4px;padding:14px 16px;border-radius:var(--r);background:var(--maroon);color:#fff;cursor:pointer;border:0;width:100%;text-align:left;box-shadow:0 5px 0 var(--maroon2);font-family:inherit}
+.roll .die{font-size:34px;animation:wob 2.4s ease-in-out infinite}
+.roll b{display:block;font-size:17px}
+.roll span{font-size:13px;opacity:.8}
+@keyframes wob{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(14deg) scale(1.1)}}
+
+/* Ангилал */
+.sec{padding-top:22px}
+.sec h2{font-family:'Lobster',cursive;font-weight:400;font-size:36px;color:var(--maroon);display:flex;align-items:center;gap:10px}
+.sec h2 i{font-style:normal;font-size:30px}
+.sec .sub{color:var(--red);font:600 15px 'Rubik';margin:0 0 12px 2px}
+.sec h2::after{content:"";flex:1;height:5px;border-radius:5px;background:repeating-linear-gradient(90deg,var(--red) 0 10px,transparent 10px 16px);opacity:.5}
+
+.card{position:relative;display:flex;gap:12px;background:#fff;border:2px solid var(--maroon);border-radius:var(--r);padding:16px;margin-bottom:14px;box-shadow:0 5px 0 var(--maroon);transition:transform .15s}
+.card:hover{transform:translateY(-2px)}
+.card .body{flex:1;min-width:0;display:flex;flex-direction:column}
+.card h3{font-family:'Lobster',cursive;font-weight:400;font-size:25px;color:var(--maroon);line-height:1.1}
+.card .d{margin:6px 0 12px;color:var(--muted);font-size:14.5px;line-height:1.45}
+.card .foot{margin-top:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kcal{font:600 14px 'Rubik';color:var(--muted);margin-right:2px}
+.aic{display:inline-grid;place-items:center;border-radius:8px}
+.price{margin-left:auto;font:800 22px 'Rubik';color:var(--red)}
+.card .ph{flex:none;width:112px;height:112px;border-radius:16px;object-fit:cover;border:2px solid var(--maroon)}
+.card.noimg::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:7px;border-radius:0 6px 6px 0;background:var(--red)}
+.tag{position:absolute;top:-11px;right:14px;background:var(--yellow);color:var(--maroon);border:2px solid var(--maroon);border-radius:999px;padding:3px 12px;font:800 12px 'Rubik';letter-spacing:1px}
+.card.out{opacity:.55;filter:grayscale(.7)}
+.card.out .tag{background:#ddd}
+.empty{text-align:center;padding:40px 10px;color:var(--muted)}
+
+/* Харшил шүүлтүүр */
+.sheet{position:fixed;inset:0;z-index:100;background:rgba(44,2,2,.6);display:none;align-items:flex-end;justify-content:center}
+.sheet.open{display:flex}
+.sheet .p{background:var(--maroon);color:#fff;width:100%;max-width:760px;border-radius:26px 26px 0 0;padding:22px 18px 28px;max-height:88vh;overflow:auto;animation:up .25s ease-out}
+@keyframes up{from{transform:translateY(60px);opacity:0}}
+.sheet h3{font-family:'Lobster',cursive;font-weight:400;font-size:28px}
+.sheet p.s{opacity:.8;font-size:14px;margin:4px 0 14px}
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ab{background:transparent;border:2px solid transparent;border-radius:16px;color:#fff;padding:8px 2px;font:500 13px 'Rubik';text-align:center;cursor:pointer}
+.ab .aic{margin-bottom:6px}
+.ab.sel{border-color:var(--yellow);background:rgba(255,255,255,.1)}
+.ab.sel::after{content:"✕ байхгүй";display:block;color:var(--yellow);font-size:11px;margin-top:2px}
+.sheet .go{margin-top:18px;width:100%;padding:14px;border-radius:14px;border:0;background:var(--yellow);color:var(--maroon);font:800 16px 'Rubik';cursor:pointer}
+
+/* Рулетк цонх */
+.pick{background:var(--cream);color:var(--ink);text-align:center;padding:24px 20px 28px}
+.pick .big{font:400 40px 'Lobster';color:var(--red);min-height:52px}
+.pick .pd{color:var(--muted);margin:6px 0 14px;min-height:42px}
+.pick .row2{display:flex;gap:10px}
+.pick button{flex:1;padding:13px;border-radius:14px;border:2px solid var(--maroon);font:700 15px 'Rubik';cursor:pointer;background:#fff;color:var(--maroon);box-shadow:0 3px 0 var(--maroon)}
+.pick button.pri{background:var(--red);color:#fff}
+
+/* Хөл */
+footer{margin-top:40px;background:var(--maroon);color:#fff;position:relative;padding:34px 0 40px}
+footer .skyline{top:-62px;bottom:auto;height:64px;fill:var(--maroon)}
+footer h3{font-family:'Lobster',cursive;font-weight:400;font-size:28px;margin-bottom:4px}
+footer .s{opacity:.8;font-size:14px;margin-bottom:16px}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 6px;text-align:center;font-size:13.5px;margin-bottom:26px}
+.legend .aic{margin-bottom:6px}
+.box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:18px;margin-bottom:14px}
+.box a{color:#fff;text-decoration:none}
+.box .l{display:flex;gap:10px;align-items:flex-start;margin:6px 0;font-size:15.5px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.14);margin:6px 8px 0 0;font:500 15px 'Rubik'}
+.copy{text-align:center;opacity:.6;font-size:13px;margin-top:22px}
+.copy a{color:var(--yellow)}
+
+@media(max-width:380px){.card .ph{width:90px;height:90px}.card h3{font-size:22px}}

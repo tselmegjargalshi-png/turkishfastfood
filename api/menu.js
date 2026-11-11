@@ -32,7 +32,7 @@ export async function PUT(request) {
   if (text.length > MAX_BYTES) return json({ error: "Өгөгдөл хэт том байна." }, 413);
   let data;
   try { data = JSON.parse(text); } catch { return json({ error: "JSON буруу байна." }, 400); }
-  if (!data || !Array.isArray(data.categories) || typeof data.brand !== "object") {
+  if (!data || !Array.isArray(data.categories) || typeof data.settings !== "object") {
     return json({ error: "Цэсний бүтэц буруу байна." }, 400);
   }
   data.updatedAt = new Date().toISOString();
