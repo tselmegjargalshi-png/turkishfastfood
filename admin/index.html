@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="mn">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Удирдлагын самбар · İstanbul Fast Food</title>
+<title>Yönetim Paneli · İstanbul Fast Food</title>
 <link rel="icon" href="/assets/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@400;500;600;700;800&subset=cyrillic,cyrillic-ext,latin,latin-ext&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
@@ -71,55 +71,55 @@ textarea.inp{min-height:76px;resize:vertical}
 <div class="lock" id="lock">
   <div class="b">
     <img src="/assets/logo.png" alt="logo">
-    <h1>Удирдлагын самбар</h1>
-    <input class="inp" id="pw" type="password" placeholder="Нууц үг" autocomplete="current-password">
-    <button class="btn" id="login" style="width:100%">Нэвтрэх</button>
+    <h1>Yönetim Paneli</h1>
+    <input class="inp" id="pw" type="password" placeholder="Şifre" autocomplete="current-password">
+    <button class="btn" id="login" style="width:100%">Giriş yap</button>
     <div class="err" id="err"></div>
   </div>
 </div>
 
 <div id="app" style="display:none">
   <div class="bar"><div class="wrap"><div class="row">
-    <img src="/assets/logo.png" alt="logo"><b>Удирдлага</b>
-    <a class="btn sm sec2" href="/" target="_blank" style="text-decoration:none">Цэс харах</a>
-    <button class="btn sm sec2" id="logout">Гарах</button>
+    <img src="/assets/logo.png" alt="logo"><b>Yönetim</b>
+    <a class="btn sm sec2" href="/" target="_blank" style="text-decoration:none">Menüyü gör</a>
+    <button class="btn sm sec2" id="logout">Çıkış</button>
   </div></div></div>
 
   <div class="wrap">
     <div class="tabs">
-      <button class="tab act" data-t="items">🍔 Хоолнууд</button>
-      <button class="tab" data-t="cats">🗂 Ангилал</button>
-      <button class="tab" data-t="set">⚙️ Тохиргоо</button>
-      <button class="tab" data-t="data">💾 Өгөгдөл</button>
+      <button class="tab act" data-t="items">🍔 Yemekler</button>
+      <button class="tab" data-t="cats">🗂 Kategoriler</button>
+      <button class="tab" data-t="set">⚙️ Ayarlar</button>
+      <button class="tab" data-t="data">💾 Veri</button>
     </div>
 
     <div id="t_items">
       <div class="stats" id="stats"></div>
       <div class="tools">
-        <input class="inp" id="aq" placeholder="Хоол хайх...">
+        <input class="inp" id="aq" placeholder="Yemek ara...">
         <select class="inp" id="acat" style="max-width:190px"></select>
-        <button class="btn" id="addItem">＋ Шинэ хоол</button>
+        <button class="btn" id="addItem">＋ Yeni yemek</button>
       </div>
       <div id="list"></div>
     </div>
 
     <div id="t_cats" style="display:none">
       <div id="catList"></div>
-      <button class="btn" id="addCat">＋ Шинэ ангилал</button>
+      <button class="btn" id="addCat">＋ Yeni kategori</button>
     </div>
 
     <div id="t_set" style="display:none">
       <div class="card2" id="setForm"></div>
-      <button class="btn" id="saveSet">Хадгалах</button>
+      <button class="btn" id="saveSet">Kaydet</button>
     </div>
 
     <div id="t_data" style="display:none">
-      <div class="note">Өөрчлөлт бүр автоматаар Vercel Blob руу хадгалагдаж, бүх үйлчлүүлэгчид 1 минутын дотор харагдана. Нууц үгийг Vercel дээрх <code>ADMIN_PASSWORD</code> хувьсагчаар солино. «JSON татах» нь нөөц хуулбар авахад хэрэгтэй.</div>
+      <div class="note">Her değişiklik otomatik olarak Vercel Blob'a kaydedilir ve müşterilere yaklaşık 1 dakika içinde yansır. Şifreyi Vercel'deki <code>ADMIN_PASSWORD</code> değişkeniyle değiştirebilirsiniz. «JSON indir» yedek almak için kullanılır.</div>
       <div class="card2">
         <div class="mact" style="justify-content:flex-start">
-          <button class="btn" id="exp">⬇ JSON татах</button>
-          <label class="btn sec2" style="cursor:pointer">⬆ JSON оруулах<input type="file" id="imp" accept="application/json" style="display:none"></label>
-          <button class="btn danger" id="reset">↺ Репод байгаа анхны цэсийг сэргээх</button>
+          <button class="btn" id="exp">⬇ JSON indir</button>
+          <label class="btn sec2" style="cursor:pointer">⬆ JSON yükle<input type="file" id="imp" accept="application/json" style="display:none"></label>
+          <button class="btn danger" id="reset">↺ Depodaki ilk menüyü geri yükle</button>
         </div>
       </div>
     </div>

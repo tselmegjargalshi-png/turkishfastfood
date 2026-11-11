@@ -9,7 +9,7 @@ body{font-family:'Rubik',system-ui,sans-serif;background:var(--cream);color:var(
 .disp{font-family:'Lobster','Rubik',cursive;letter-spacing:.3px}
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
 
-/* Дээд мөр */
+/* Üst bar */
 .top{position:sticky;top:0;z-index:50;background:rgba(255,246,236,.92);backdrop-filter:blur(10px);border-bottom:3px solid var(--maroon)}
 .top .row{display:flex;align-items:center;gap:10px;padding:8px 0}
 .brand{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
@@ -46,14 +46,14 @@ body{font-family:'Rubik',system-ui,sans-serif;background:var(--cream);color:var(
 
 .notice{margin:18px 0 6px;padding:14px 16px;border:2px dashed var(--red);border-radius:16px;background:#fff0ec;color:var(--red);font:700 17px 'Rubik';text-align:center;text-transform:uppercase;letter-spacing:.5px}
 
-/* Рулетк */
+/* Rulet */
 .roll{display:flex;align-items:center;gap:12px;margin:14px 0 4px;padding:14px 16px;border-radius:var(--r);background:var(--maroon);color:#fff;cursor:pointer;border:0;width:100%;text-align:left;box-shadow:0 5px 0 var(--maroon2);font-family:inherit}
 .roll .die{font-size:34px;animation:wob 2.4s ease-in-out infinite}
 .roll b{display:block;font-size:17px}
 .roll span{font-size:13px;opacity:.8}
 @keyframes wob{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(14deg) scale(1.1)}}
 
-/* Ангилал */
+/* Kategori */
 .sec{padding-top:22px}
 .sec h2{font-family:'Lobster',cursive;font-weight:400;font-size:36px;color:var(--maroon);display:flex;align-items:center;gap:10px}
 .sec h2 i{font-style:normal;font-size:30px}
@@ -76,7 +76,7 @@ body{font-family:'Rubik',system-ui,sans-serif;background:var(--cream);color:var(
 .card.out .tag{background:#ddd}
 .empty{text-align:center;padding:40px 10px;color:var(--muted)}
 
-/* Харшил шүүлтүүр */
+/* Alerjen filtresi */
 .sheet{position:fixed;inset:0;z-index:100;background:rgba(44,2,2,.6);display:none;align-items:flex-end;justify-content:center}
 .sheet.open{display:flex}
 .sheet .p{background:var(--maroon);color:#fff;width:100%;max-width:760px;border-radius:26px 26px 0 0;padding:22px 18px 28px;max-height:88vh;overflow:auto;animation:up .25s ease-out}
@@ -87,10 +87,10 @@ body{font-family:'Rubik',system-ui,sans-serif;background:var(--cream);color:var(
 .ab{background:transparent;border:2px solid transparent;border-radius:16px;color:#fff;padding:8px 2px;font:500 13px 'Rubik';text-align:center;cursor:pointer}
 .ab .aic{margin-bottom:6px}
 .ab.sel{border-color:var(--yellow);background:rgba(255,255,255,.1)}
-.ab.sel::after{content:"✕ байхгүй";display:block;color:var(--yellow);font-size:11px;margin-top:2px}
+.ab.sel::after{content:"✕ olmasın";display:block;color:var(--yellow);font-size:11px;margin-top:2px}
 .sheet .go{margin-top:18px;width:100%;padding:14px;border-radius:14px;border:0;background:var(--yellow);color:var(--maroon);font:800 16px 'Rubik';cursor:pointer}
 
-/* Рулетк цонх */
+/* Rulet penceresi */
 .pick{background:var(--cream);color:var(--ink);text-align:center;padding:24px 20px 28px}
 .pick .big{font:400 40px 'Lobster';color:var(--red);min-height:52px}
 .pick .pd{color:var(--muted);margin:6px 0 14px;min-height:42px}
@@ -98,7 +98,7 @@ body{font-family:'Rubik',system-ui,sans-serif;background:var(--cream);color:var(
 .pick button{flex:1;padding:13px;border-radius:14px;border:2px solid var(--maroon);font:700 15px 'Rubik';cursor:pointer;background:#fff;color:var(--maroon);box-shadow:0 3px 0 var(--maroon)}
 .pick button.pri{background:var(--red);color:#fff}
 
-/* Хөл */
+/* Alt bilgi */
 footer{margin-top:40px;background:var(--maroon);color:#fff;position:relative;padding:34px 0 40px}
 footer .skyline{top:-62px;bottom:auto;height:64px;fill:var(--maroon)}
 footer h3{font-family:'Lobster',cursive;font-weight:400;font-size:28px;margin-bottom:4px}

@@ -1,13 +1,12 @@
-# İstanbul Fast Food · Дижитал цэс
+# İstanbul Fast Food · Dijital Menü
 
-Монгол хэлтэй дижитал цэс, харшлын 14 тэмдэг, калори, хоолны карт, удирдлагын самбар, 2 QR.
-Хоолны нэр, ангиллын нэр, валют (₺) Турк хэлээр.
+Dijital menü, 14 alerjen simgesi, kalori bilgisi, yemek kartları, yönetim paneli ve 2 QR kod.
 
-* Цэс: `/`
-* Удирдлага: `/admin` (нууц үг нь Vercel дээрх `ADMIN_PASSWORD`)
-* QR: `/qr`
+* Menü: `/`
+* Yönetim: `/admin` (şifre Vercel'deki `ADMIN_PASSWORD` değişkenidir)
+* QR kodlar: `/qr`
 
-## Хадгалалт
-Анхны цэс `data/menu.json`. Админ дээр өөрчлөлт хийхэд `/api/menu` Vercel Blob руу хадгалж, цэс 1 минутын дотор шинэчлэгдэнэ. Зураг `/api/upload`-аар Blob руу орно.
+## Depolama
+İlk menü `data/menu.json` dosyasındadır. Yönetim panelinde yapılan değişiklikler `/api/menu` üzerinden Vercel Blob'a kaydedilir ve menü yaklaşık 1 dakika içinde güncellenir. Fotoğraflar `/api/upload` ile Blob'a yüklenir.
 
-Vercel тохиргоо: `ADMIN_PASSWORD` (заавал), Storage дээр Blob store холбоход `BLOB_READ_WRITE_TOKEN` автоматаар үүснэ.
+Vercel ayarları: `ADMIN_PASSWORD` (zorunlu). Storage bölümünde bir Blob store bağlayınca `BLOB_READ_WRITE_TOKEN` otomatik oluşur.

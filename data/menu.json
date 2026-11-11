@@ -1,13 +1,13 @@
 {
   "settings": {
     "brand": "İstanbul Fast Food",
-    "slogan": "Босфорын амт, таны мөчид",
-    "subSlogan": "Шинэхэн, халуун, хурдан. Истанбулын гудамжны амтыг таны ширээнд.",
-    "notice": "Захиалгаа касс дээр өгнө үү",
+    "slogan": "Boğaz'ın lezzeti, anın tadı",
+    "subSlogan": "Taze, sıcak, hızlı. İstanbul sokaklarının tadı sofranızda.",
+    "notice": "Lütfen siparişinizi kasada verin",
     "location": "Moda Caddesi No 28, Kadıköy, İstanbul",
     "instagram": "istanbulfastfood",
     "phone": "+90 216 555 01 28",
-    "hours": "Өдөр бүр 10:00 ээс 02:00 хүртэл",
+    "hours": "Her gün 10:00 ile 02:00 arası",
     "mealCards": [
       "Setcard",
       "Metropol Card",
@@ -20,49 +20,49 @@
     {
       "id": "burger",
       "name": "Burgerler",
-      "sub": "Шарсан мах, шинэхэн талх",
+      "sub": "Közde pişmiş et, taze ekmek",
       "icon": "🍔"
     },
     {
       "id": "doner",
       "name": "Dönerler",
-      "sub": "Шарсан мах, лаваш боов",
+      "sub": "Közlenmiş et, lavaş ekmeği",
       "icon": "🥙"
     },
     {
       "id": "pide",
       "name": "Lahmacun ve Pide",
-      "sub": "Чулуун зуухны уламжлалт боов",
+      "sub": "Taş fırından geleneksel hamur işleri",
       "icon": "🫓"
     },
     {
       "id": "tavuk",
       "name": "Tavuk",
-      "sub": "Шаржигнасан болон шарсан тахиа",
+      "sub": "Çıtır ve ızgara tavuk",
       "icon": "🍗"
     },
     {
       "id": "yan",
       "name": "Yan Ürünler",
-      "sub": "Хажуугийн амттан",
+      "sub": "Yanında olmazsa olmaz",
       "icon": "🍟"
     },
     {
       "id": "salata",
       "name": "Salatalar",
-      "sub": "Шинэхэн ногоо",
+      "sub": "Taze sebzeler",
       "icon": "🥗"
     },
     {
       "id": "icecek",
       "name": "İçecekler",
-      "sub": "Хүйтэн болон халуун ундаа",
+      "sub": "Soğuk ve sıcak içecekler",
       "icon": "🥤"
     },
     {
       "id": "tatli",
       "name": "Tatlılar",
-      "sub": "Сүүлчийн чихэрлэг цэг",
+      "sub": "Tatlı bir final",
       "icon": "🍯"
     }
   ],
@@ -71,7 +71,7 @@
       "id": "b1",
       "cat": "burger",
       "name": "İstanbul Burger",
-      "desc": "Үхрийн махан котлет, чеддар бяслаг, шинэхэн салат, улаан лооль, гэрийн соус",
+      "desc": "Dana köfte, cheddar peyniri, taze marul, domates, ev yapımı sos",
       "kcal": 780,
       "price": 285,
       "allergens": [
@@ -89,7 +89,7 @@
       "id": "b2",
       "cat": "burger",
       "name": "Çifte Burger",
-      "desc": "Хоёр давхар үхрийн мах, хайлсан бяслаг, даршилсан өргөст хэмх",
+      "desc": "Çift kat dana köfte, eritilmiş peynir, kornişon turşu",
       "kcal": 1050,
       "price": 365,
       "allergens": [
@@ -107,7 +107,7 @@
       "id": "b3",
       "cat": "burger",
       "name": "Tavuk Burger",
-      "desc": "Шарсан тахианы цээж, майонез, шинэхэн салат",
+      "desc": "Izgara tavuk göğsü, mayonez, taze marul",
       "kcal": 690,
       "price": 235,
       "allergens": [
@@ -124,7 +124,7 @@
       "id": "b4",
       "cat": "burger",
       "name": "Acılı Burger",
-      "desc": "Халуун чинжүүтэй соус, халапено, үхрийн махан котлет",
+      "desc": "Acı sos, jalapeno, dana köfte",
       "kcal": 840,
       "price": 310,
       "allergens": [
@@ -142,7 +142,7 @@
       "id": "d1",
       "cat": "doner",
       "name": "Tavuk Döner",
-      "desc": "Тахианы мах, нимгэн талх, улаан лооль, сонгино, ногоон салат",
+      "desc": "Tavuk eti, ince lavaş, domates, soğan, yeşil salata",
       "kcal": 620,
       "price": 195,
       "allergens": [
@@ -157,7 +157,7 @@
       "id": "d2",
       "cat": "doner",
       "name": "Et Döner",
-      "desc": "Үхрийн махан дөнер, тахини соус, сонгино, чинжүү",
+      "desc": "Dana döner, tahin sos, soğan, biber",
       "kcal": 710,
       "price": 245,
       "allergens": [
@@ -172,7 +172,7 @@
       "id": "d3",
       "cat": "doner",
       "name": "İskender",
-      "desc": "Нимгэн зүссэн дөнер, улаан лоолийн соус, халуун цөцгийн тос, тараг",
+      "desc": "İnce dilimlenmiş döner, domates sosu, sıcak tereyağı, yoğurt",
       "kcal": 980,
       "price": 395,
       "allergens": [
@@ -187,7 +187,7 @@
       "id": "d4",
       "cat": "doner",
       "name": "Tavuk Dürüm",
-      "desc": "Лаваш боов, тахианы мах, даршилсан ногоо, сармистай соус",
+      "desc": "Lavaş, tavuk eti, turşu, sarımsaklı sos",
       "kcal": 580,
       "price": 185,
       "allergens": [
@@ -203,7 +203,7 @@
       "id": "d5",
       "cat": "doner",
       "name": "Köfte Ekmek",
-      "desc": "Шарсан үхрийн махан котлет, талх, сонгино, улаан лооль",
+      "desc": "Izgara köfte, ekmek, soğan, domates",
       "kcal": 760,
       "price": 225,
       "allergens": [
@@ -218,7 +218,7 @@
       "id": "p1",
       "cat": "pide",
       "name": "Lahmacun",
-      "desc": "Нимгэн зуурмаг дээр нарийн татсан мах, чинжүү, ногоон навч",
+      "desc": "İnce hamur üzerinde kıyılmış et, biber, yeşillik",
       "kcal": 330,
       "price": 120,
       "allergens": [
@@ -232,7 +232,7 @@
       "id": "p2",
       "cat": "pide",
       "name": "Kaşarlı Pide",
-      "desc": "Кашар бяслагтай завь хэлбэрийн халуун боов",
+      "desc": "Kaşar peynirli sıcak kayık pide",
       "kcal": 720,
       "price": 210,
       "allergens": [
@@ -248,7 +248,7 @@
       "id": "p3",
       "cat": "pide",
       "name": "Kıymalı Pide",
-      "desc": "Татсан үхрийн мах, сонгино, улаан чинжүү, шарсан цөцгийн тос",
+      "desc": "Dana kıyma, soğan, kırmızı biber, eritilmiş tereyağı",
       "kcal": 780,
       "price": 235,
       "allergens": [
@@ -264,7 +264,7 @@
       "id": "p4",
       "cat": "pide",
       "name": "Karışık Pide",
-      "desc": "Sucuk, кашар бяслаг, мөөг, ногоон чинжүү, шарсан ногоо",
+      "desc": "Sucuk, kaşar peyniri, mantar, yeşil biber, közlenmiş sebze",
       "kcal": 890,
       "price": 275,
       "allergens": [
@@ -280,7 +280,7 @@
       "id": "t1",
       "cat": "tavuk",
       "name": "Çıtır Tavuk",
-      "desc": "Шаржигнасан гурилтай тахианы мах, 6 ширхэг",
+      "desc": "Çıtır kaplamalı tavuk eti, 6 adet",
       "kcal": 640,
       "price": 230,
       "allergens": [
@@ -295,7 +295,7 @@
       "id": "t2",
       "cat": "tavuk",
       "name": "Tavuk Şiş",
-      "desc": "Тарагтай маринадлагдсан тахианы шиш, шарсан чинжүү, будаа",
+      "desc": "Yoğurtlu marineli tavuk şiş, közlenmiş biber, pilav",
       "kcal": 540,
       "price": 245,
       "allergens": [
@@ -309,7 +309,7 @@
       "id": "t3",
       "cat": "tavuk",
       "name": "Tavuk Kanat",
-      "desc": "Халуун соустай тахианы далавч, 8 ширхэг",
+      "desc": "Acı soslu tavuk kanat, 8 adet",
       "kcal": 710,
       "price": 220,
       "allergens": [
@@ -324,7 +324,7 @@
       "id": "y1",
       "cat": "yan",
       "name": "Patates Kızartması",
-      "desc": "Шарсан алтан өнгөт төмс, далайн давс",
+      "desc": "Altın sarısı kızarmış patates, deniz tuzu",
       "kcal": 420,
       "price": 85,
       "allergens": [],
@@ -336,7 +336,7 @@
       "id": "y2",
       "cat": "yan",
       "name": "Soğan Halkası",
-      "desc": "Шаржигнасан сонгины цагираг, соус хамт",
+      "desc": "Çıtır soğan halkası, yanında sos",
       "kcal": 380,
       "price": 95,
       "allergens": [
@@ -352,7 +352,7 @@
       "id": "y3",
       "cat": "yan",
       "name": "Peynirli Patates",
-      "desc": "Шарсан төмс дээр хайлсан чеддар бяслаг",
+      "desc": "Kızarmış patates üzerinde eritilmiş cheddar peyniri",
       "kcal": 560,
       "price": 115,
       "allergens": [
@@ -366,7 +366,7 @@
       "id": "s1",
       "cat": "salata",
       "name": "Çoban Salata",
-      "desc": "Улаан лооль, өргөст хэмх, сонгино, ногоон чинжүү, чидун тос",
+      "desc": "Domates, salatalık, soğan, yeşil biber, zeytinyağı",
       "kcal": 140,
       "price": 90,
       "allergens": [
@@ -380,7 +380,7 @@
       "id": "s2",
       "cat": "salata",
       "name": "Sezar Salata",
-      "desc": "Шарсан тахиа, ромен салат, пармезан, крутон, сезар соус",
+      "desc": "Izgara tavuk, marul, parmesan, kruton, sezar sos",
       "kcal": 360,
       "price": 150,
       "allergens": [
@@ -398,7 +398,7 @@
       "id": "s3",
       "cat": "salata",
       "name": "Gavurdağı Salatası",
-      "desc": "Улаан лооль, грек самар, анар шүүс, нарийн хэрчсэн сонгино",
+      "desc": "Domates, ceviz, nar ekşisi, ince doğranmış soğan",
       "kcal": 220,
       "price": 125,
       "allergens": [
@@ -413,7 +413,7 @@
       "id": "i1",
       "cat": "icecek",
       "name": "Ayran",
-      "desc": "Давстай тарагтай уламжлалт ундаа",
+      "desc": "Tuzlu yoğurt içeceği",
       "kcal": 120,
       "price": 40,
       "allergens": [
@@ -427,7 +427,7 @@
       "id": "i2",
       "cat": "icecek",
       "name": "Şalgam",
-      "desc": "Хар лууван шүүс, халуун чинжүүтэй сонголт бий",
+      "desc": "Şalgam suyu, acılı seçeneği de var",
       "kcal": 25,
       "price": 45,
       "allergens": [],
@@ -439,7 +439,7 @@
       "id": "i3",
       "cat": "icecek",
       "name": "Kola",
-      "desc": "Мөстэй хийжүүлсэн ундаа, 330 мл",
+      "desc": "Buzlu gazlı içecek, 330 ml",
       "kcal": 140,
       "price": 55,
       "allergens": [],
@@ -451,7 +451,7 @@
       "id": "i4",
       "cat": "icecek",
       "name": "Limonata",
-      "desc": "Гэрийн нимбэгний ундаа, гаа навчтай",
+      "desc": "Ev yapımı limonata, nane yapraklı",
       "kcal": 110,
       "price": 60,
       "allergens": [],
@@ -463,7 +463,7 @@
       "id": "i5",
       "cat": "icecek",
       "name": "Taze Portakal Suyu",
-      "desc": "Шинэхэн шахсан жүржийн шүүс",
+      "desc": "Taze sıkılmış portakal suyu",
       "kcal": 110,
       "price": 85,
       "allergens": [],
@@ -475,7 +475,7 @@
       "id": "i6",
       "cat": "icecek",
       "name": "Türk Çayı",
-      "desc": "Тусгай хундагатай халуун хар цай",
+      "desc": "İnce belli bardakta demli çay",
       "kcal": 2,
       "price": 20,
       "allergens": [],
@@ -487,7 +487,7 @@
       "id": "i7",
       "cat": "icecek",
       "name": "Türk Kahvesi",
-      "desc": "Элсэн дээр чанасан нарийн нунтаг кофе, лоукум хамт",
+      "desc": "Közde pişmiş Türk kahvesi, lokum eşliğinde",
       "kcal": 15,
       "price": 70,
       "allergens": [
@@ -501,7 +501,7 @@
       "id": "k1",
       "cat": "tatli",
       "name": "Künefe",
-      "desc": "Халуун бяслагтай кадаиф, чихрийн сироп, нунтагласан фисташк",
+      "desc": "Sıcak peynirli kadayıf, şerbet, Antep fıstığı",
       "kcal": 520,
       "price": 175,
       "allergens": [
@@ -517,7 +517,7 @@
       "id": "k2",
       "cat": "tatli",
       "name": "Baklava",
-      "desc": "Нимгэн давхарласан гурил, фисташк, зөгийн бал, 4 ширхэг",
+      "desc": "İnce yufka katları, Antep fıstığı, bal şerbeti, 4 dilim",
       "kcal": 480,
       "price": 160,
       "allergens": [
@@ -532,7 +532,7 @@
       "id": "k3",
       "cat": "tatli",
       "name": "Sütlaç",
-      "desc": "Зууханд шарсан будааны сүүн амттан",
+      "desc": "Fırınlanmış sütlü pirinç tatlısı",
       "kcal": 280,
       "price": 110,
       "allergens": [
@@ -546,7 +546,7 @@
       "id": "k4",
       "cat": "tatli",
       "name": "Kazandibi",
-      "desc": "Шатаасан ёроолтой зөөлөн сүүн амттан",
+      "desc": "Yanık tabanlı yumuşak sütlü tatlı",
       "kcal": 310,
       "price": 115,
       "allergens": [

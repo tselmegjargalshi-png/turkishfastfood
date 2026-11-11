@@ -20,9 +20,9 @@ const digest = (s) => createHash("sha256").update(String(s)).digest();
 /** Returns null when authorized, otherwise a Response to send back. */
 export function requireAdmin(request) {
   const expected = env("ADMIN_PASSWORD");
-  if (!expected) return json({ error: "ADMIN_PASSWORD тохируулаагүй байна." }, 503);
+  if (!expected) return json({ error: "ADMIN_PASSWORD ayarlanmamış." }, 503);
   const given = request.headers.get("x-admin-password") || "";
-  if (!given || !timingSafeEqual(digest(given), digest(expected))) return json({ error: "Нууц үг буруу байна." }, 401);
+  if (!given || !timingSafeEqual(digest(given), digest(expected))) return json({ error: "Şifre yanlış." }, 401);
   return null;
 }
 

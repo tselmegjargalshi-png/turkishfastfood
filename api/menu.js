@@ -26,14 +26,14 @@ export async function GET() {
 export async function PUT(request) {
   const denied = requireAdmin(request);
   if (denied) return denied;
-  if (!blobReady()) return json({ error: "Vercel Blob холбогдоогүй байна. README заавраар Blob store холбоно уу." }, 503);
+  if (!blobReady()) return json({ error: "Vercel Blob bağlı değil. Lütfen bir Blob store bağlayın." }, 503);
 
   const text = await request.text();
-  if (text.length > MAX_BYTES) return json({ error: "Өгөгдөл хэт том байна." }, 413);
+  if (text.length > MAX_BYTES) return json({ error: "Veri çok büyük." }, 413);
   let data;
-  try { data = JSON.parse(text); } catch { return json({ error: "JSON буруу байна." }, 400); }
+  try { data = JSON.parse(text); } catch { return json({ error: "JSON geçersiz." }, 400); }
   if (!data || !Array.isArray(data.categories) || typeof data.settings !== "object") {
-    return json({ error: "Цэсний бүтэц буруу байна." }, 400);
+    return json({ error: "Menü yapısı geçersiz." }, 400);
   }
   data.updatedAt = new Date().toISOString();
   const body = JSON.stringify(data);

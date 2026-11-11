@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="mn">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>İstanbul Fast Food · Дижитал цэс</title>
-<meta name="description" content="İstanbul Fast Food дижитал цэс. Харшлын мэдээлэл, калори, үнэ.">
+<title>İstanbul Fast Food · Dijital Menü</title>
+<meta name="description" content="İstanbul Fast Food dijital menü. Alerjen bilgisi, kalori, fiyat.">
 <meta name="theme-color" content="#cd0403">
 <link rel="icon" href="/assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +36,10 @@
   <div class="wrap">
     <div class="row">
       <div class="brand"><img src="/assets/logo.png" alt="İstanbul Fast Food" style="mix-blend-mode:multiply"><b id="brandName">İstanbul</b></div>
-      <button class="ibtn" id="btnSearch" aria-label="Хайх">🔍</button>
-      <button class="ibtn" id="btnFilter" aria-label="Харшлаар шүүх">⚠️</button>
+      <button class="ibtn" id="btnSearch" aria-label="Ara">🔍</button>
+      <button class="ibtn" id="btnFilter" aria-label="Alerjene göre filtrele">⚠️</button>
     </div>
-    <div class="searchbar" id="searchbar"><input id="q" type="search" placeholder="Хоолоо хайх: Döner, Künefe..." autocomplete="off"></div>
+    <div class="searchbar" id="searchbar"><input id="q" type="search" placeholder="Yemek ara: Döner, Künefe..." autocomplete="off"></div>
     <nav class="chips" id="chips"></nav>
   </div>
 </header>
@@ -48,7 +48,7 @@
   <svg class="cres" viewBox="0 0 100 100" aria-hidden="true"><path d="M60 8a42 42 0 1 0 0 84a34 34 0 1 1 0-84z" fill="#fff" opacity=".9"/><path d="M78 40l4 9 10 1-7.500 6.500 2.500 10-9-5.500-9 5.500 2.500-10L64 50l10-1z" fill="#fff"/></svg>
   <span class="steam">♨</span><span class="steam b">♨</span>
   <img class="logo" src="/assets/logo.png" alt="İstanbul Fast Food">
-  <h1 id="slogan">Босфорын амт, таны мөчид</h1>
+  <h1 id="slogan">Boğaz'ın lezzeti, anın tadı</h1>
   <p id="subSlogan"></p>
   <svg class="skyline" fill="#fff6ec"><use href="#sky"/></svg>
 </section>
@@ -57,34 +57,34 @@
 
 <main class="wrap">
   <div class="notice" id="notice"></div>
-  <button class="roll" id="btnRoll"><span class="die">🎲</span><div><b>Юу идэхээ мэдэхгүй байна уу?</b><span>Дараад хоолоо санамсаргүй сонго</span></div></button>
+  <button class="roll" id="btnRoll"><span class="die">🎲</span><div><b>Ne yiyeceğine karar veremedin mi?</b><span>Dokun, yemeğini rastgele seç</span></div></button>
   <div id="menu"></div>
 </main>
 
 <footer>
   <svg class="skyline" fill="#420303"><use href="#sky"/></svg>
   <div class="wrap">
-    <h3 class="disp">Харшлын мэдээлэл</h3>
-    <p class="s">Хоол бүр дээрх тэмдэг нь агуулагдах харшил үүсгэгч бүтээгдэхүүнийг заана. Харшилтай бол ажилтанд заавал хэлээрэй.</p>
+    <h3 class="disp">Alerjen Bilgisi</h3>
+    <p class="s">Her yemekteki simgeler, içerdiği alerjen maddeleri gösterir. Alerjiniz varsa lütfen mutlaka personele söyleyin.</p>
     <div class="legend" id="legend"></div>
     <div class="box" id="contact"></div>
-    <div class="box"><h3 class="disp" style="font-size:24px">Хоолны карт хүлээн авна</h3><div id="cards" style="margin-top:6px"></div></div>
+    <div class="box"><h3 class="disp" style="font-size:24px">Yemek kartı kabul ediyoruz</h3><div id="cards" style="margin-top:6px"></div></div>
     <p class="copy" id="copy"></p>
   </div>
 </footer>
 
 <div class="sheet" id="sheetF"><div class="p">
-  <h3>Харшлаар шүүх</h3>
-  <p class="s">Танд харшил үүсгэдэг зүйлийг сонговол тэдгээрийг агуулсан хоол цэснээс нууцлагдана.</p>
+  <h3>Alerjene göre filtrele</h3>
+  <p class="s">Alerjiniz olan maddeleri seçerseniz, onları içeren yemekler menüden gizlenir.</p>
   <div class="agrid" id="agrid"></div>
-  <button class="go" id="fGo">Болсон</button>
+  <button class="go" id="fGo">Tamam</button>
 </div></div>
 
 <div class="sheet" id="sheetR"><div class="p pick">
   <div style="font-size:52px" id="rDie">🎲</div>
   <div class="big" id="rName">...</div>
   <div class="pd" id="rDesc"></div>
-  <div class="row2"><button id="rAgain">Дахин эргүүл</button><button class="pri" id="rClose">Энийг авна</button></div>
+  <div class="row2"><button id="rAgain">Tekrar çevir</button><button class="pri" id="rClose">Bunu alıyorum</button></div>
 </div></div>
 
 <script src="/assets/common.js"></script>

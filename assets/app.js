@@ -2,22 +2,22 @@
   const { ALLERGENS, icon, fmtPrice, esc, load } = IFF;
   const $ = s => document.querySelector(s);
   let D;
-  try { D = await load(); } catch (e) { $('#menu').innerHTML = '<p class="empty">Цэс ачаалж чадсангүй. Дахин оролдоно уу.</p>'; return; }
+  try { D = await load(); } catch (e) { $('#menu').innerHTML = '<p class="empty">Menü yüklenemedi. Lütfen tekrar deneyin.</p>'; return; }
 
   const S = D.settings;
   let activeCat = null, query = '', avoid = new Set();
 
-  // Ерөнхий текст
-  document.title = S.brand + ' · Дижитал цэс';
+  // Genel metinler
+  document.title = S.brand + ' · Dijital Menü';
   $('#brandName').textContent = 'İstanbul';
   $('#slogan').textContent = S.slogan;
   $('#subSlogan').textContent = S.subSlogan;
   $('#notice').textContent = S.notice;
-  const words = ['Шинэхэн', 'Халуун', 'Хурдан', 'Истанбулын амт', 'Босфорын сэвшээ', 'Гал дээр шарсан'];
+  const words = ['Taze', 'Sıcak', 'Hızlı', 'İstanbul lezzeti', 'Boğaz esintisi', 'Közde pişmiş'];
   const mq = words.map(w => '<span style="margin:0 22px">' + w + '</span><span>✦</span>').join('');
   $('#marq').innerHTML = mq + mq + mq + mq;
 
-  // Ангилал
+  // Kategoriler
   const cats = D.categories;
   $('#chips').innerHTML = cats.map(c => '<button class="chip" data-c="' + c.id + '">' + c.icon + ' ' + esc(c.name) + '</button>').join('');
   $('#chips').addEventListener('click', e => {
@@ -37,10 +37,10 @@
 
   function card(it) {
     const ph = it.img ? '<img class="ph" src="' + esc(it.img) + '" alt="' + esc(it.name) + '" loading="lazy">' : '';
-    const tag = it.available === false ? '<span class="tag">ДУУССАН</span>' : (it.signature ? '<span class="tag">★ ОНЦЛОХ</span>' : '');
+    const tag = it.available === false ? '<span class="tag">TÜKENDİ</span>' : (it.signature ? '<span class="tag">★ İMZA</span>' : '');
     return '<article class="card ' + (it.img ? '' : 'noimg') + (it.available === false ? ' out' : '') + '">' + tag +
       '<div class="body"><h3>' + esc(it.name) + '</h3><div class="d">' + esc(it.desc) + '</div>' +
-      '<div class="foot"><span class="kcal">' + (it.kcal || 0) + ' ккал</span>' + it.allergens.map(a => icon(a, 28)).join('') +
+      '<div class="foot"><span class="kcal">' + (it.kcal || 0) + ' kcal</span>' + it.allergens.map(a => icon(a, 28)).join('') +
       '<span class="price">' + fmtPrice(it.price) + '</span></div></div>' + ph + '</article>';
   }
 
@@ -52,11 +52,11 @@
       total += list.length;
       html += '<section class="sec" id="cat_' + c.id + '" data-c="' + c.id + '"><h2><i>' + c.icon + '</i>' + esc(c.name) + '</h2><div class="sub">' + esc(c.sub) + '</div>' + list.map(card).join('') + '</section>';
     });
-    $('#menu').innerHTML = total ? html : '<div class="empty"><div style="font-size:48px">🔎</div><p>Тохирох хоол олдсонгүй. Хайлт эсвэл шүүлтүүрээ өөрчилнө үү.</p></div>';
+    $('#menu').innerHTML = total ? html : '<div class="empty"><div style="font-size:48px">🔎</div><p>Uygun yemek bulunamadı. Aramayı veya filtreyi değiştirin.</p></div>';
     observe();
   }
 
-  // Гүйлгэх үед идэвхтэй ангилал тодрох
+  // Kaydırırken aktif kategoriyi vurgula
   let io;
   function observe() {
     if (io) io.disconnect();
@@ -73,14 +73,14 @@
     });
   }
 
-  // Хайлт
+  // Arama
   $('#btnSearch').onclick = () => {
     const sb = $('#searchbar'); sb.classList.toggle('open'); $('#btnSearch').classList.toggle('on');
     if (sb.classList.contains('open')) $('#q').focus(); else { $('#q').value = ''; query = ''; render(); }
   };
   $('#q').oninput = e => { query = e.target.value.trim(); render(); };
 
-  // Харшлын шүүлтүүр
+  // Alerjen filtresi
   $('#agrid').innerHTML = ALLERGENS.map(a => '<button class="ab" data-a="' + a.id + '">' + icon(a.id, 46) + '<div>' + a.name + '</div></button>').join('');
   $('#agrid').addEventListener('click', e => {
     const b = e.target.closest('.ab'); if (!b) return;
@@ -91,10 +91,10 @@
   $('#fGo').onclick = () => $('#sheetF').classList.remove('open');
   $('#sheetF').onclick = e => { if (e.target.id === 'sheetF') e.currentTarget.classList.remove('open'); };
 
-  // Рулетк
+  // Rulet
   function roll() {
     const pool = D.items.filter(i => i.available !== false && visible(i) && i.cat !== 'icecek');
-    if (!pool.length) { $('#rName').textContent = 'Хоол олдсонгүй'; return; }
+    if (!pool.length) { $('#rName').textContent = 'Yemek bulunamadı'; return; }
     const faces = ['🎲', '🍔', '🥙', '🍟', '🍗', '🫓', '🍯'];
     let n = 0; const dieEl = $('#rDie');
     const t = setInterval(() => {
@@ -103,7 +103,7 @@
       dieEl.textContent = faces[n++ % faces.length];
       if (n > 14) {
         clearInterval(t);
-        $('#rDesc').innerHTML = esc(it.desc) + '<br><b style="color:var(--red)">' + fmtPrice(it.price) + '</b> · ' + (it.kcal || 0) + ' ккал';
+        $('#rDesc').innerHTML = esc(it.desc) + '<br><b style="color:var(--red)">' + fmtPrice(it.price) + '</b> · ' + (it.kcal || 0) + ' kcal';
         dieEl.textContent = '🎉';
       }
     }, 90);
@@ -113,7 +113,7 @@
   $('#rClose').onclick = () => $('#sheetR').classList.remove('open');
   $('#sheetR').onclick = e => { if (e.target.id === 'sheetR') e.currentTarget.classList.remove('open'); };
 
-  // Хөл
+  // Alt bilgi
   $('#legend').innerHTML = ALLERGENS.map(a => '<div>' + icon(a.id, 46) + '<div>' + a.name + '</div></div>').join('');
   const ig = String(S.instagram || '').replace(/^@/, '');
   $('#contact').innerHTML =
@@ -122,7 +122,7 @@
     '<a class="pill" href="https://instagram.com/' + encodeURIComponent(ig) + '" target="_blank" rel="noopener">📸 @' + esc(ig) + '</a>' +
     '<a class="pill" href="tel:' + esc(String(S.phone).replace(/\s/g, '')) + '">📞 ' + esc(S.phone) + '</a>';
   $('#cards').innerHTML = (S.mealCards || []).map(c => '<span class="pill">' + esc(c) + '</span>').join('');
-  $('#copy').innerHTML = esc(S.brand) + ' · ' + new Date().getFullYear() + '<br><a href="/admin/">Удирдлага</a>';
+  $('#copy').innerHTML = esc(S.brand) + ' · ' + new Date().getFullYear() + '<br><a href="/admin/">Yönetim</a>';
 
   render();
 })();

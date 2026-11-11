@@ -8,13 +8,13 @@ const TYPES = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "
 export async function POST(request) {
   const denied = requireAdmin(request);
   if (denied) return denied;
-  if (!blobReady()) return json({ error: "Vercel Blob холбогдоогүй байна." }, 503);
+  if (!blobReady()) return json({ error: "Vercel Blob bağlı değil." }, 503);
 
   const type = (request.headers.get("content-type") || "").split(";")[0].trim();
-  if (!TYPES[type]) return json({ error: "Зөвхөн JPG, PNG, WEBP, GIF, AVIF, SVG зураг оруулна." }, 415);
+  if (!TYPES[type]) return json({ error: "Yalnızca JPG, PNG, WEBP, GIF, AVIF, SVG yüklenebilir." }, 415);
   const buf = Buffer.from(await request.arrayBuffer());
-  if (!buf.length) return json({ error: "Хоосон файл." }, 400);
-  if (buf.length > MAX_BYTES) return json({ error: "Зураг 4MB аас бага байх ёстой." }, 413);
+  if (!buf.length) return json({ error: "Dosya boş." }, 400);
+  if (buf.length > MAX_BYTES) return json({ error: "Fotoğraf 4 MB'tan küçük olmalı." }, 413);
 
   const raw = new URL(request.url).searchParams.get("name") || "image";
   const base = raw.replace(/\.[^.]+$/, "").normalize("NFKD").replace(/[^\w]+/g, "_").replace(/^_+|_+$/g, "").slice(0, 40) || "image";
@@ -26,10 +26,10 @@ export async function POST(request) {
 export async function DELETE(request) {
   const denied = requireAdmin(request);
   if (denied) return denied;
-  if (!blobReady()) return json({ error: "Vercel Blob холбогдоогүй байна." }, 503);
+  if (!blobReady()) return json({ error: "Vercel Blob bağlı değil." }, 503);
   let url = "";
   try { ({ url } = await request.json()); } catch { /* ignore */ }
-  if (!/^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/media\//i.test(url || "")) return json({ error: "Буруу хаяг." }, 400);
+  if (!/^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/media\//i.test(url || "")) return json({ error: "Geçersiz adres." }, 400);
   await del(url);
   return json({ ok: true });
 }
